@@ -1,75 +1,61 @@
-# React + TypeScript + Vite
+# YumMama - Food Ordering App (Demo UI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Created by **Ammar Bin Hairi**
 
-Currently, two official plugins are available:
+A mobile-first React frontend web application for food ordering and restaurant management. This project is currently configured as an interactive visual demo with built-in mock data for exploring both Customer and Admin perspectives.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📱 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> **Note on Mobile View:** This application is strictly designed for **mobile viewport dimensions**. It is optimized for mobile browser screens or browser device simulation mode (F12 > Toggle Device Toolbar). 
 
-## Expanding the ESLint configuration
+* **Future Roadmap:** This web application serves as a design/architecture blueprint for an upcoming native cross-platform mobile application to be built using **Flutter**.
+* **Database & Architecture:** Designed with **MongoDB** in mind for schema modeling and backend API integration.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Quick Start (Frontend Only)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 1. Prerequisites
+* [Node.js](https://nodejs.org/) (v16 or higher)
+* `npm`, `yarn`, or `pnpm`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Installation & Running
 
-```
+Clone the repository and install dependencies:
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# Clone the repository
+git clone <your-repository-url>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Navigate to project directory
+cd yummama
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+npm install
 
-```
+# Start the local development server
+npm start
+# or 
+npm run dev
+
+## 🔑 Demo Credentials
+
+| Role | Email | Password | Description |
+| :--- | :--- | :--- | :--- |
+| **👑 Admin** | `nasrul@yummama.com` | `yummama2026` | Full administrative control, order tracking, and menu management. |
+| **👤 Customer** | `halusinasibyammar@gmail.com` | `test1234` | Food browsing, item customization, cart, and checkout flow. |
+
+---
+
+## 🐳 Docker Support
+
+A `Dockerfile` is included in the project for containerizing the application.
+
+### Build and Run with Docker
+
+Run the following commands in your terminal:
+
+```bash
+docker build -t yummama-frontend .
