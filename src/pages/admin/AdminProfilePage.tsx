@@ -41,8 +41,12 @@ export default function AdminProfilePage() {
     setSaving(true)
     try {
       const res = await profileApi.updateProfile(form)
-      updateUser(res.user)
-      toast.success('Profile updated')
+      if (res.user) {
+        updateUser(res.user)
+        toast.success('Profile updated')
+      } else {
+        toast.error('Failed to update profile data')
+      }
     } catch (err: any) {
       toast.error(err?.response?.data?.message || 'Failed to update profile')
     } finally {

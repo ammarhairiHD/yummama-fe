@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
 import {
-  RefreshCw, Search, Filter, ChevronDown, ChevronUp, X,
+  RefreshCw, Search, ChevronDown, ChevronUp, X,
   Clock, CheckCircle2, XCircle, Truck, UtensilsCrossed, AlertTriangle,
 } from 'lucide-react'
 import clsx from 'clsx'
 import toast from 'react-hot-toast'
 import { adminGetOrders, adminUpdateOrderStatus, adminRejectOrder } from '../../api/admin'
-import type { Order, OrderStatus } from '../../types'
+import type { Order } from '../../types'
 
 const STATUS_CONFIG: Record<string, { label: string; color: string; bg: string }> = {
   paid:            { label: 'New Order',    color: 'text-blue-400',   bg: 'bg-blue-400/10 border-blue-400/30' },

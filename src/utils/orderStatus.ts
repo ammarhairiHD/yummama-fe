@@ -8,6 +8,7 @@ export const ORDER_STATUS_LABEL: Record<OrderStatus, string> = {
   ready: 'Ready for Pickup',
   completed: 'Completed',
   cancelled: 'Cancelled',
+  rejected: 'Rejected',
 }
 
 export const ORDER_STATUS_COLOR: Record<OrderStatus, string> = {
@@ -18,4 +19,5 @@ export const ORDER_STATUS_COLOR: Record<OrderStatus, string> = {
   ready: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
   completed: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
   cancelled: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
+  rejected: 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400',
 }

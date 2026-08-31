@@ -1,4 +1,4 @@
-import type { User, Category, MenuItem, Order, Promo, Transaction, Ad, UserWithStats, PromoCategory } from '../types'
+import type { User, Category, MenuItem, Order, Promo, Transaction, Ad, UserWithStats } from '../types'
 
 // ─── Demo credentials ─────────────────────────────────────────────────────────
 export const DEMO_ACCOUNTS = [

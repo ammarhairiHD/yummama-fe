@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Plus, Pencil, Trash2, Search, ToggleLeft, ToggleRight, X, Star, Tag } from 'lucide-react'
+import { Plus, Pencil, Trash2, Search, ToggleLeft, ToggleRight, X, Star } from 'lucide-react'
 import clsx from 'clsx'
 import toast from 'react-hot-toast'
 import {
